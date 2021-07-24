@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthBay</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        header {
+            display: flex;
+            height: fit-content;
+            border: 1px solid silver;
+            align-items: center;
+
+        }
+
+        #it1 {
+            display: flex;
+            flex-direction: row;
+            -ms-flex-align: start;
+        }
+
+        #it2 {
+            margin-left: auto;
+            margin-right: 2%;
+
+        }
+
+        .it img {
+            height: 9vh;
+        }
+
+        #it2 a {
+
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar ul {
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        @media (max-width: 370px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        .navbar div {
+            padding: 2vh 2vw 3vh 2vw;
+            margin-bottom: 1%;
+        }
+
+        .navbar div:hover {
+            background-color: rgb(245, 245, 255);
+            border: 1px solid rgb(215, 215, 223);
+            border-radius: 4px;
+        }
+        main {
+            min-height: 80vh;
+            height: fit-content;
+            margin: 1vh 5vw;
+            /* border: 2px solid red; */
+        }
+
+        .head {
+            /* border: 2px solid red; */
+            text-align: right;
+            padding: 0px 1vw;
+            font-size: 4vw;
+        }
+
+        .subhead {
+            /* border: 2px solid red; */
+            text-align: right;
+            padding: 0px 1vw;
+            font-size: 1.5vw;
+            color: slategray;
+        }
+
+        p {
+            margin: 1vh 0px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            /* border: 2px solid black; */
+            height: 97vh;
+            margin-top: 1vh;
+            background-color: black;
+        }
+
+        .gitem:hover img {
+            transform: scale(1.1);
+
+        }
+
+        .gitem:hover iframe {
+            transform: scale(1.1);
+        }
+        @media(max-width:420px) {
+          .grid{
+              display: flex;
+              flex-direction: column;
+              height: fit-content;
+              background-color: whitesmoke;
+              justify-content: center;
+              align-items: center;
+          }
+        }
+        @media (max-width:1000px) {
+            .last{
+              flex-direction: column-reverse;
+
+          }
+          .l1{
+              align-self: center;
+              width:80vw;
+          }
+          .l2{
+              align-self: center;
+              
+          }
+          .l1 iframe{
+              width: 80vw;
+              margin: auto;
+              text-align: center;
+          }
+        }
+        #no3 img {
+            height: 35.5vh;
+            width: 32.7vw;
+
+        }
+
+        #no1 img {
+            height: 47.7vh;
+            width: 32.7vw;
+        }
+
+        #no2 iframe {
+            height: 73.2vh;
+            width: 54.9vw;
+            /* opacity: 0.97; */
+        }
+
+        #no1 {
+            grid-column: 1/4;
+            grid-row: 1/5;
+            /* border: 2px solid blue; */
+            z-index: 1;
+        }
+
+        #no2 {
+            grid-column: 3/8;
+            grid-row: 2/8;
+            /* border: 2px solid green; */
+            z-index: 1;
+
+        }
+
+        #no3 {
+            grid-column: 6/10;
+            grid-row: 6/10;
+            /* border: 2px solid yellow; */
+        }
+
+        #no4 {
+            background-color: whitesmoke;
+            grid-column: 3/10;
+            grid-row: 1/5;
+        }
+
+        .content1 {
+            margin: 2vh;
+            margin-right: 30vw;
+            margin-left: 5vw;
+            border: 1px solid silver;
+            height: fit-content;
+            padding: 1vw;
+        }
+
+        .content2 {
+            margin: 1vh;
+            margin-right: 5vw;
+            margin-left: 35vw;
+            border: 1px solid silver;
+            height: fit-content;
+            padding: 1vw;
+        }
+
+        .last {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            margin: auto;
+
+
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .l1 {
+            height: fit-content;
+            width: fit-content;
+            margin: 1vw;
+            /* border: 2px solid red; */
+
+        }
+
+        .l2 {
+            height: fit-content;
+            width: fit-content;
+            margin: 1vw;
+            padding: 1vh;
+            margin-left: 4vw;
+            /* border: 2px solid red; */
+            
+            font-size: 1.5rem;
+            line-height: 9vh;
+
+        }
+        .l2 h3{
+            color: lightslategray;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            height: fit-content;
+            padding: 2vw;
+        }
+
+        .foo1 ul {
+            line-height: 5vh;
+        }
+
+        .foo1 ul li {
+
+            list-style-type: none;
+            display: inline;
+        }
+
+        .foo1 {
+            margin-left: 5vw;
+            display: inline-block;
+            /* border: 2px solid red;*/
+            height: fit-content;
+            width: fit-content;
+            padding: 3vh;
+
+        }
+
+        .foo1 ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .foo2 {
+            position: absolute;
+            left: 35vw;
+            display: inline-block;
+            /* border: 2px solid red; */
+            height: fit-content;
+            width: fit-content;
+            padding: 3vh;
+        }
+
+        .foo2 img {
+            height: 7vh;
+            margin-left: 1vw;
+        }
+
+        .foo3 ul {
+            text-align: center;
+        }
+
+        .foo3 ul li {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="it" id="it1"><img src="logo.png" alt=""></div>
+        <div class="it" id="it2"><a href="">Join Us</a></div>
+        <div class="it" id="it3"> <img src="dropdown icon.png" alt=""></div>
+
+    </header>
+    <br>
+    <div class="navbar">
+        <div>Home</div>
+        <div class="Neil">Places to Visit</div>
+        <div>Food</div>
+        <div>Hotels</div>
+        <div>How to Reach</div>
+        <div>Activities</div>
+    </div>
+    <main>
+        <p class="head">North Bay Island</p>
+        <p class="subhead">Andaman Islands, Andaman and Nicobar Islands, India</p>
+        <P> Located near Port Blair, North Bay is a secluded island which spans over a relatively medium area and is
+            generally visited by tourists on a day trip to both Ross Island and North Bay.The island is surrounded by
+            crystal clear cyan colored water with a shallow shoreline that offers a magnificent underwater view. The
+            beach is white sand and shaded by dense tropical trees with hints of huts and wooden benches to set the
+            mood.The island is most famous for water sports and features a plethora of vendors with great pricing
+            structure- if you are looking for some adventure and aren't afraid to get wet.</P>
+        <div class="grid">
+            <div class="gitem" id="no1">
+                <img src="pic.jpg" alt="">
+            </div>
+            <div class="gitem" id="no2">
+                <iframe src="https://www.youtube.com/embed/t4KtjB3H-oI" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gitem" id="no3">
+                <img src="night.jpg" alt="">
+            </div>
+            <div class="gitem" id="no4"></div>
+        </div>
+    </main>
+    <div class="content1">
+        Considered an epitome of natural splendour, it is one of those numerous places where one can enjoy a combination
+        of peace and thrill. The experience of being at this place will gift you with a bundle of memories. While its
+        water sports will set your adrenaline pumping, you can also choose this destination to find an escape from the
+        boisterous city crowd. Yes, North Bay Island is truly a hub of natural beauty and if you are a nature lover, you
+        will be in awe of this place. As soon as you enter this island, you will find numerous scuba shops offering
+        snorkelling and scuba diving.
+    </div>
+    <div class="content2">
+        You can also avail glass bottom rides to get a close view of beautiful coral reefs. One must-do activity on this
+        island is a sea walk. This is because this island flaunts varieties of reefs and fishes which can’t be found in
+        most of the islands. The sea walk platoon is located nearby the island and their team will take you from the
+        island to platoon. Sea walking is done by wearing an oxygen helmet so that you can breathe easy.
+    </div>
+    <div class="last">
+        <div class="l1">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15627.432954679984!2d92.7517422!3d11.7044514!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1952d19c898dcd3!2sNorth%20Bay!5e0!3m2!1sen!2sin!4v1627066594072!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="l2">
+            <p>
+            <h3>Things to do at North Bay Island:</h3>
+            <ol>
+                <li>Scuba Diving.</li>
+                <li>Sea Walk.</li>
+                <li>Parasailing. </li>
+                <li>Dolphin Glass Bottom Boat.</li>
+                <li>Coral Safari Submarine Ride.</li>
+                <li>Snorkeling.</li>
+            </ol>
+
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foo1">
+            <ul>
+                <li><a href="#">HOME</a></li><br>
+                <li><a href="#">ABOUT</a></li><br>
+                <li><a href="#">CAREER</a></li><br>
+                <li><a href="#">WORK WITH US</a></li><br>
+                <li><a href="#">CONTACT</a></li><br>
+            </ul>
+        </div>
+        <div class="foo2">
+            <ul>
+                <p>Follow us on </p><br><br>
+                <a href=""><img
+                        src="https://misstourist.com/wp-content/themes/mts_child/assets/svg/source/social-facebook.svg"
+                        alt=""></a>
+                <a href=""><img
+                        src="https://misstourist.com/wp-content/themes/mts_child/assets/svg/source/social-instagram-color.svg"
+                        alt=""></a>
+                <a href=""> <img
+                        src="https://misstourist.com/wp-content/themes/mts_child/assets/svg/source/social-twitter-color.svg"
+                        alt=""></a>
+            </ul>
+        </div>
+
+        <div class="foo3">
+            <ul>
+                <li>Copyright 2020-2024 |</li>
+                <li>All right reserved |</li>
+                <li>Terms and Conditions |</li>
+                <li>Privacy policy</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
